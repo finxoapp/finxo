@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Environment — never commit real values
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Testing
+playwright-report/
+test-results/
+coverage/
+
+# Agent runtime files
+.agent_context/
+.claude/
+node_modules/
