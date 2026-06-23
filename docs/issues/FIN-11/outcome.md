@@ -1,7 +1,7 @@
 # FIN-11 — Establish the self-documenting agentic loop (outcome)
 
 - **Issue:** FIN-11 — tracked in Multica
-- **PR:** _to be filled once opened_
+- **PR:** https://github.com/finxoapp/finxo/pull/2
 - **Status:** docs-only PR opened, awaiting QA Reviewer sign-off before merge.
 
 ## What shipped
