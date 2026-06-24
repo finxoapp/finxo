@@ -36,8 +36,10 @@ jobs:
       - name: E2E tests
         run: pnpm test:e2e
         env:
-          AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+          # Real secrets when set; safe dummy fallbacks for CI redirect/render tests
+          # (e2e suite does not perform actual Google OAuth flows)
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'ci-e2e-placeholder-not-for-production' }}
           AUTH_GOOGLE_ID: ${{ secrets.AUTH_GOOGLE_ID }}
           AUTH_GOOGLE_SECRET: ${{ secrets.AUTH_GOOGLE_SECRET }}
-          AUTH_ALLOWED_DOMAIN: ${{ secrets.AUTH_ALLOWED_DOMAIN }}
+          AUTH_ALLOWED_DOMAIN: ${{ secrets.AUTH_ALLOWED_DOMAIN || 'example.com' }}
           AUTH_URL: http://localhost:3000
